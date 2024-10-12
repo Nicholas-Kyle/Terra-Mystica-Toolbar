@@ -160,7 +160,9 @@ function fetchAndDisplayLastTurnLog() {
         return { id: parseInt(id, 10), content: log, playerName: playerName };
     });
 
-    const subjectName = "ArnoldPalmtree";
+    const playerBoard = document.querySelector('.player-board.current-player-board');
+    const playerNameElement = playerBoard.querySelector('.player-name a');
+    const subjectName = playerNameElement.textContent;
     var isLocked = false;
     let lastActionPhaseStartId = -1;
     let currentActionPhaseId = -1;
