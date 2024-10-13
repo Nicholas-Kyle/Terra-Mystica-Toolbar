@@ -158,6 +158,9 @@
         logContainer.style.border = '1px solid #ccc';
         logContainer.style.padding = '10px';
         logContainer.style.display = 'none';
+        logContainer.style.maxHeight = '160px';
+        logContainer.style.overflowY = 'auto';
+
         return logContainer;
     }
 
