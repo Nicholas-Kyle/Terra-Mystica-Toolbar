@@ -7,45 +7,32 @@
 
     const toolbarDiv = document.createElement('div');
     toolbarDiv.id = 'nicks_cool_toolbar';
-    toolbarDiv.style.display = 'flex';
-    toolbarDiv.style.justifyContent = 'center';
-    toolbarDiv.style.marginBottom = '10px';
-    toolbarDiv.style.backgroundColor = '#f4f4f4';
-    toolbarDiv.style.padding = '10px';
-    toolbarDiv.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.1)';
-    toolbarDiv.style.zIndex = '9999';
-    toolbarDiv.style.borderRadius = '4px';
+        toolbarDiv.style.position = 'absolute'; // Take it out of normal document flow
+        toolbarDiv.style.display = 'flex';
+        toolbarDiv.style.justifyContent = 'flex-start';
+        toolbarDiv.style.transform = 'translate(20rem, -3.5rem)'; // You can adjust this as needed
+        toolbarDiv.style.backgroundColor = 'transparent';
+        toolbarDiv.style.padding = '5px';
+        toolbarDiv.style.zIndex = '9999';
+
 
     const buttonContainer = document.createElement('div');
     buttonContainer.style.display = 'flex';
     buttonContainer.style.gap = '10px';
 
+    const buttonStyle = 'padding: 5px 10px; background-color: #090446; color: white; border: none; border-radius: 4px; cursor: pointer; white-space: nowrap; margin: 0 5px;';
+
     const toggleButton = document.createElement('button');
     toggleButton.textContent = 'Toggle Tile Labels';
-    toggleButton.style.padding = '8px 12px';
-    toggleButton.style.backgroundColor = '#090446';
-    toggleButton.style.color = 'white';
-    toggleButton.style.border = 'none';
-    toggleButton.style.borderRadius = '4px';
-    toggleButton.style.cursor = 'pointer';
+    toggleButton.style.cssText = buttonStyle;
 
     const roundLogButton = document.createElement('button');
     roundLogButton.textContent = 'Current Round Log';
-    roundLogButton.style.padding = '8px 12px';
-    roundLogButton.style.backgroundColor = '#786F52';
-    roundLogButton.style.color = '#ffffff';
-    roundLogButton.style.border = 'none';
-    roundLogButton.style.borderRadius = '4px';
-    roundLogButton.style.cursor = 'pointer';
+    roundLogButton.style.cssText = buttonStyle.replace('#090446', '#786F52');
 
     const lastTurnLogButton = document.createElement('button');
     lastTurnLogButton.textContent = 'Logs Since Last Turn';
-    lastTurnLogButton.style.padding = '8px 12px';
-    lastTurnLogButton.style.backgroundColor = '#EAC435';
-    lastTurnLogButton.style.color = '#ffffff';
-    lastTurnLogButton.style.border = 'none';
-    lastTurnLogButton.style.borderRadius = '4px';
-    lastTurnLogButton.style.cursor = 'pointer';
+    lastTurnLogButton.style.cssText = buttonStyle.replace('#090446', '#EAC435');
 
     buttonContainer.appendChild(toggleButton);
     buttonContainer.appendChild(roundLogButton);
