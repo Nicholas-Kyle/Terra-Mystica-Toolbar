@@ -3,9 +3,6 @@
   "name": "Terra mystica better logs",
   "version": "1.0",
   "description": "Improves the logs for BGA Terra Mystica.",
-  "permissions": [
-    "activeTab"
-  ],
   "icons": {
     "16": "spadelogo (3).png",
     "48": "spadelogo (2).png",
